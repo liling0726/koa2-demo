@@ -1,0 +1,14 @@
+{
+  "name": "koa2-demo",
+  "version": "1.0.0",
+  "description": "koa2简单练习",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liling",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.5.1"
+  }
+}
