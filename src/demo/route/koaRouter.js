@@ -27,10 +27,14 @@ home.get('/', async (ctx) => {
     </ul>
      `
     ctx.body = html
-}).get('/page/404', async (ctx) => {
+})
+
+//page 路由
+let page = new Router()
+page.get('/404', async (ctx) => {
     const html= await render(path.resolve(__dirname,'pages/404.html'))
     ctx.body = html
-}).get('page/todo', async (ctx) => {
+}).get('/todo', async (ctx) => {
    const html= await render(path.resolve(__dirname,'pages/todo.html'))
     ctx.body = html
 })
@@ -38,6 +42,7 @@ home.get('/', async (ctx) => {
 //装在所有路由
 let router = new Router()
 router.use('/', home.routes(), home.allowedMethods())
+.use('/page', page.routes(), page.allowedMethods())
 
 
 //加载路由中间件
