@@ -13,6 +13,9 @@
     "koa-router": "^7.4.0"
   },
   "devDependencies": {
-    "koa-bodyparser": "^4.2.0"
+    "koa-bodyparser": "^4.2.0",
+    "koa-mysql-session": "^0.0.2",
+    "koa-session-minimal": "^3.0.4",
+    "koa-static": "^4.0.3"
   }
 }
