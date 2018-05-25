@@ -3,3 +3,8 @@ koa2的基本练习
 
 ## koa2中间件
 ## koa2 Route
+
+
+## 启动命令
+1. template-->index
+node src/demo/template/index.js
