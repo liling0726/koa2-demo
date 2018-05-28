@@ -32,7 +32,7 @@ function getSuffixName(fileName) {
 }
 
 function uploadFile(ctx, options) {
-    const { req,req: { headers } } = ctx
+    const { req, req: { headers } } = ctx
 
     const busboy = new Busboy({ headers })
 
@@ -61,6 +61,9 @@ function uploadFile(ctx, options) {
             file.on('end', function () {
                 Object.assign(result, {
                     success: true,
+                    data:{
+                        pictureUrl:`//${ctx.host}/image/${fileType}/${fileName}`
+                    },
                     message: '文件上传成功'
                 })
                 console.log('文件上传成功')

@@ -16,6 +16,7 @@
     "busboy": "^0.2.14",
     "ejs": "^2.6.1",
     "koa-bodyparser": "^4.2.0",
+    "koa-convert": "^1.2.0",
     "koa-mysql-session": "^0.0.2",
     "koa-session-minimal": "^3.0.4",
     "koa-static": "^4.0.3",
