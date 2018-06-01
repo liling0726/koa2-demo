@@ -41,12 +41,12 @@ page.get('/404', async (ctx) => {
 
 //装在所有路由
 let router = new Router()
-router.use('/', home.routes(), home.allowedMethods())
-.use('/page', page.routes(), page.allowedMethods())
+router.use('/', home.routes())
+.use('/page', page.routes())
 
 
 //加载路由中间件
-app.use(router.routes()).use(router.allowedMethods())
+app.use(router.routes())
 
 app.listen(3000, () => {
     console.log('route-use-middleware is starting at port 3000')
